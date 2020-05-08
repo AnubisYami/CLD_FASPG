@@ -45,21 +45,28 @@ $usuario   = $_SESSION['usuarioNome'];
 </head>
 
 <body>
-
+<!-- começo do wrapper -->
     <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
         <nav id="sidebar" class="sidebar-wrapper">
+
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
                     <a href="#">CLD 2020</a>
-                 
+                    
+                    <a id="toggle-sidebar" class="btn" href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
                 </div>
+
+
                     
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
                     <div class="user-pic">
                         <img class="img-responsive img-rounded" src="src/img/user.jpg" alt="User picture">
                     </div>
+
                     <div class="user-info">
                         <span class="user-name">
                           <?php
@@ -74,19 +81,7 @@ $usuario   = $_SESSION['usuarioNome'];
                         </span>
                     </div>
                 </div>
-                <!-- sidebar-search  -->
-            <!--    <div class="sidebar-item sidebar-search">
-                    <div>
-                        <div class="input-group">
-                            <input type="text" class="form-control search-menu" placeholder="Search...">
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+            
                 <!-- sidebar-menu  -->
                 <div class=" sidebar-item sidebar-menu">
                     <ul>
@@ -199,15 +194,14 @@ $usuario   = $_SESSION['usuarioNome'];
                         </li>
                       
                         <li class="header-menu">
-                           
-                        </li>
-                        <li>
-                            <a href="grade_aula.php">
-                                <i class="fas fa-th-large"></i>
-                                <span class="menu-text">Grade de Aula</span>
+                            <li>
+                                <a href="grade_aula.php">
+                                    <i class="fas fa-th-large"></i>
+                                    <span class="menu-text">Grade de Aula</span>
                                 
-                            </a>
-                        </li>                       
+                                </a>
+                            </li>      
+                        </li>              
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->
@@ -267,13 +261,14 @@ $usuario   = $_SESSION['usuarioNome'];
             </div>
         </nav>
 
-    <div id="page-content-wrapper pt-2">
-        <main class="page-content pt-2">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 
-                        <a id="toggle-sidebar" class="btn" href="#">
+    
+        
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <a id="toggle-sidebar" class="btn" href="#">
                             <i class="fas fa-bars"></i>
                         </a>
+                        
                   
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -284,121 +279,20 @@ $usuario   = $_SESSION['usuarioNome'];
             
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
+                                Meu usuário
                             </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Meu perfil</a>
+                                <a class="dropdown-item" href="sair.php">Sair</a>
                         </li>   
                     </ul>
-                </div>
+              
             </nav>
-        </main>
-    </div>
+
+
 </div>
 
-         <!--   <main class="page-content pt-2">
-            <div id="overlay" class="overlay"></div>
-            <div class="container-fluid p-5">
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <h2>Pro Sidebar</h2>
-                        <p>This is a responsive sidebar template with dropdown menu based on bootstrap framework.</p>
-
-                    </div>
-                    <div class="form-group col-md-12">
-                        <iframe
-                            src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=small"
-                            frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
-                        <iframe
-                            src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=small"
-                            frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
-                    </div>
-
-                    <div class="form-group col-md-12">
-                        <a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
-                            <span>Toggle Sidebar</span>
-                        </a>
-                        <a id="pin-sidebar" class="btn btn-outline-secondary rounded-0" href="#">
-                            <span>Pin Sidebar</span>
-                        </a>
-
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <h3>Themes</h3>
-                        <p>Here are more themes that you can use</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <a href="#" data-theme="default-theme" class="theme default-theme selected"></a>
-                        <a href="#" data-theme="chiller-theme" class="theme chiller-theme"></a>
-                        <a href="#" data-theme="legacy-theme" class="theme legacy-theme"></a>
-                        <a href="#" data-theme="ice-theme" class="theme ice-theme"></a>
-                        <a href="#" data-theme="cool-theme" class="theme cool-theme"></a>
-                        <a href="#" data-theme="light-theme" class="theme light-theme"></a>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <p>You can also use background image </p>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <a href="#" data-bg="bg1" class="theme theme-bg selected"></a>
-                        <a href="#" data-bg="bg2" class="theme theme-bg"></a>
-                        <a href="#" data-bg="bg3" class="theme theme-bg"></a>
-                        <a href="#" data-bg="bg4" class="theme theme-bg"></a>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="toggle-bg" checked>
-                            <label class="custom-control-label" for="toggle-bg">Background image</label>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="toggle-border-radius">
-                            <label class="custom-control-label" for="toggle-border-radius">Border radius</label>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <hr>
-                <div class="row ">
-                    <div class="form-group col-md-12">
-                        <small>Made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <span
-                                class="text-secondary font-weight-bold">Mohamed
-                                Azouaoui</span></small>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <a href="https://github.com/azouaoui-med" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://twitter.com/azouaoui_med" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/azouaoui_med/" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/mohamed-azouaoui/" target="_blank"
-                            class="btn btn-sm bg-secondary shadow-sm rounded-0 text-light mr-3 mb-3">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>  -->
- 
-    <!-- page-wrapper -->
-
-
-
-
-
+         
     <!-- using online scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
